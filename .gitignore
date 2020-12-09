@@ -2,3 +2,4 @@ praw.ini
 .DS_Store
 Pipfile
 __pycache__/
+posts_replied_to.txt
