@@ -5,7 +5,7 @@
 ## CD into the cloned repo by typing
         cd finishedbot
 ## Create a Reddit app by going to the following url:
-(reddt.com/prefs/apps)
+[This link](reddt.com/prefs/apps)
 ## Click "Create Another App"
 ![Click the create another app button](https://raw.githubusercontent.com/milodogexists/epickarmabot/master/4.png)
 ## Fill out the fields like shown in the below picture (title and description can be whatever you want)
@@ -14,8 +14,22 @@
 ![Image showing what the app looks like after we create it](https://raw.githubusercontent.com/milodogexists/epickarmabot/master/6.png)
 ## Go back into the shell and type the following command
         pip3 install -r requirements.txt
-## Type the following command
-## Fill in the fields in client secret put the app secret, in client id, put your app client id, your username into username and password into password. Press the escape key, then type :wqa and press enter. My vim just looks colorful because I changed a setting, you don't need to do that.
-![Image showing the vim screen](https://raw.githubusercontent.com/milodogexists/epickarmabot/master/9.png)
-## Type "python3 main.py" and boom, that easy!
-![Image of the command being typed](https://raw.githubusercontent.com/milodogexists/epickarmabot/master/10.png)
+## Make a file called "praw.ini" in the same folder as the cloned repo, I'm going to use vim:
+        vim praw.ini
+## Put the following in the praw.ini file, filling in the fields with your details, change the user agent to whatever you want;
+```
+[DEFAULT]
+submission_kind=t3
+subreddit_kind=t5
+oauth_url=https://oauth.reddit.com
+reddit_url=https://www.reddit.com
+short_url=https://redd.it
+[bot1]
+client_id=your client id
+client_secret=your client secret
+password=your reddit password
+username=your reddit username
+user_agent=Epic Bot
+```
+## Type the following command to start the bot:
+        python3 main.py
