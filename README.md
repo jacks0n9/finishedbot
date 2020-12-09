@@ -5,7 +5,7 @@
 ## CD into the cloned repo by typing
         cd finishedbot
 ## Create a Reddit app by going to the following url:
-[This link](reddit.com/prefs/apps)
+[This link](https://reddit.com/prefs/apps)
 ## Click "Create Another App"
 ![Click the create another app button](https://raw.githubusercontent.com/milodogexists/epickarmabot/master/4.png)
 ## Fill out the fields like shown in the below picture (title and description can be whatever you want)
