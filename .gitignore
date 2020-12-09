@@ -1,1 +1,4 @@
 praw.ini
+.DS_Store
+Pipfile
+__pycache__/
