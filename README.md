@@ -1,9 +1,9 @@
 # How to Install The Bot:
 
 ##  Go into your shell and clone the repository
-
-## CD into the cloned repo
-
+       git clone https://github.com/jacks0n9/finishedbot.git
+## CD into the cloned repo by typing
+        cd finishedbot
 ## Create a Reddit app
 ![Go to reddit.com/prefs/apps](https://raw.githubusercontent.com/milodogexists/epickarmabot/master/3.png)
 ## Click "Create Another App"
