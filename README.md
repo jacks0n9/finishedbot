@@ -1,9 +1,9 @@
 # How to Install The Bot:
 
 ##  Go into your shell and clone the repository
-![git clone https://github.com/milodogexists/epickarmabot.git](https://raw.githubusercontent.com/milodogexists/epickarmabot/master/1.png)
+
 ## CD into the cloned repo
-![cd epickarmabot](https://raw.githubusercontent.com/milodogexists/epickarmabot/master/2.png)
+
 ## Create a Reddit app
 ![Go to reddit.com/prefs/apps](https://raw.githubusercontent.com/milodogexists/epickarmabot/master/3.png)
 ## Click "Create Another App"
