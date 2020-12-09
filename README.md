@@ -4,8 +4,8 @@
        git clone https://github.com/jacks0n9/finishedbot.git
 ## CD into the cloned repo by typing
         cd finishedbot
-## Create a Reddit app
-![Go to reddit.com/prefs/apps](https://raw.githubusercontent.com/milodogexists/epickarmabot/master/3.png)
+## Create a Reddit app by going to the following url:
+[](reddt.com/prefs/apps)
 ## Click "Create Another App"
 ![Click the create another app button](https://raw.githubusercontent.com/milodogexists/epickarmabot/master/4.png)
 ## Fill out the fields like shown in the below picture (title and description can be whatever you want)
