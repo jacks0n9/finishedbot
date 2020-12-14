@@ -1,8 +1,7 @@
-import time
 import praw
 import os
 reddit = praw.Reddit('bot1')
-subreddit = reddit.subreddit("freekarma4u")
+subreddit = reddit.subreddit("freekarma4you")
 if not os.path.isfile("posts_replied_to.txt"):
     file = open("posts_replied_to.txt", 'w')
     file.write('')
@@ -18,7 +17,7 @@ def program():
             if submission.id not in done:
                 print("Commenting on post: ", submission.title)
                 try:
-                    submission.reply("OK. No free karma 4 u bot is really becoming a serious threat. He is 3k karma away from beating me. That may seem like a large gap, but he's convincing a lot of people with his lies about smilies being better than mustaches. We can't let a liar pass me! Mustache gang forever! Upvote this comment if you want me to win! Also, I feel like you are botting these comments up, because they get like 12 upvotes in 1 second. Seems fishy, it's making this race unfair, and you will get your account banned, so stop it. Also join my discord server: https://discord.gg/qrusQVAV. By the way we've commented on "+str(length)+" posts so far!")
+                    submission.reply("Please upvote this comment if u like mustaches, only a small percentage of my comments are actually upvoted, so if you could upvote this comment, it would be greatly apprectiated. By the way we've commented on "+str(length)+" posts so far!")
                     file = open('posts_replied_to.txt', 'r').read()
                     current = file
                     file = open('posts_replied_to.txt', 'w')
