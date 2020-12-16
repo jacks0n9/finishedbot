@@ -8,7 +8,7 @@ if not os.path.isfile("posts_replied_to.txt"):
 
 
 def program():
-    for submission in subreddit.new():
+    for submission in subreddit.stream.submissions():
         f=open("posts_replied_to.txt", 'r')
         read = f.read().split(',')
         length=len(read)                          
