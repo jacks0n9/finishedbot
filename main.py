@@ -32,12 +32,11 @@ def program():
                
 
 
-while True:
-    try:
-        program()
-    except KeyboardInterrupt:
-        print("\nStopping bot")
-        exit(0)
+try:
+    program()
+except KeyboardInterrupt:
+    print("\nStopping bot")
+    exit(0)
 
 
 
