@@ -6,3 +6,4 @@ posts_replied_to.txt
 logs.txt
 slacktoken.txt
 env/
+.vscode/

@@ -36,7 +36,7 @@ except Exception as error:
 	now = datetime.now()
 	date = now.strftime("%m/%d/%Y %H:%M:%S")
 	file = open("logs.txt",'a')
-	file.write(date)
+	file.write("\n"+date)
 	file.write("\n"+str(error))
 	print("Unknown error, find the error in logs.txt")
 	if sendSlackAlerts:
