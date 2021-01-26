@@ -1,42 +1,41 @@
-import praw
+from datetime import datetime
+import random
 import os
-reddit = praw.Reddit('bot1')
-subreddit = reddit.subreddit("freekarma4you")
+import praw
+mybot=praw.Reddit("bot1")
+subreddit=mybot.subreddit("freekarma4u")
 if not os.path.isfile("posts_replied_to.txt"):
-    file = open("posts_replied_to.txt", 'w')
-    file.write('')
+	file = open("posts_replied_to.txt", 'w')
+	file.write('')
 
+def docomment():
+	print("Bot started")
+	randomposts=open("randomposts.txt").read()
+	randomposts=randomposts.split('|')
+	for submission in subreddit.stream.submissions():
+		done=open("posts_replied_to.txt",'r').read().split(',')
 
-def program():
-    for submission in subreddit.stream.submissions():
-        f=open("posts_replied_to.txt", 'r')
-        read = f.read().split(',')
-        length=len(read)                          
-        with open("posts_replied_to.txt", 'r') as file:
-            done = file.read().split(',')
-            if submission.id not in done:
-                print("Commenting on post: ", submission.title)
-                try:
-                    submission.reply("Please upvote this comment if u like mustaches, only a small percentage of my comments are actually upvoted, so if you could upvote this comment, it would be greatly apprectiated. By the way we've commented on "+str(length)+" posts so far!")
-                    file = open('posts_replied_to.txt', 'r').read()
-                    current = file
-                    file = open('posts_replied_to.txt', 'w')
-                    writer = current + "," + submission.id
-                    file.write(writer)
-                    file.close()
-
-                except praw.exceptions.RedditAPIException:
-                    print("Ooops, rate limit try again in a few minutes")
-                except:
-                    print("unknown error")
-               
-
-
+		if submission.id not in done:
+			rand = random.randint(0,len(randomposts)-1)
+			randompost=randomposts[rand]
+			print("Replying to post: "+submission.title)
+			submission.reply(randompost)
+			with open("posts_replied_to.txt","a") as posts_replied_to:
+				posts_replied_to.write(submission.id+",")
+			done=open("posts_replied_to.txt",'r').read().split(',')
 try:
-    program()
+	docomment()
 except KeyboardInterrupt:
-    print("\nStopping bot")
-    exit(0)
-
+	print("\nOk stopping bot")
+	exit(0)
+except Exception as error:
+	if not os.path.isfile("logs.txt"):
+		open("logs.txt", 'w').write('')
+	now = datetime.now()
+	date = now.strftime("%m/%d/%Y %H:%M:%S")
+	file = open("logs.txt",'a')
+	file.write(date)
+	file.write("\n"+str(error))
+	print("Unknown error, find the error in logs.txt")
 
 
