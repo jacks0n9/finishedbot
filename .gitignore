@@ -3,3 +3,4 @@ praw.ini
 Pipfile
 __pycache__/
 posts_replied_to.txt
+logs.txt
