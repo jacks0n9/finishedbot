@@ -1,7 +1,9 @@
+import slack
 from datetime import datetime
 import random
 import os
 import praw
+sendSlackAlerts = True
 mybot=praw.Reddit("bot1")
 subreddit=mybot.subreddit("freekarma4u")
 if not os.path.isfile("posts_replied_to.txt"):
@@ -37,5 +39,9 @@ except Exception as error:
 	file.write(date)
 	file.write("\n"+str(error))
 	print("Unknown error, find the error in logs.txt")
+	if sendSlackAlerts:
+		slacktoken = open("slacktoken.txt").read()
+		client = slack.WebClient(token=slacktoken)
+		client.chat_postMessage(channel='alerts', text=f"An error has occured:\n{error}")
 
 
