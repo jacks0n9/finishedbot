@@ -33,3 +33,5 @@ user_agent=Epic Bot
 ```
 ## Type the following command to start the bot:
         python3 main.py
+## Adding custom mesages
+Messages are split with '|' just add a '|' and after that put your message, very easy
