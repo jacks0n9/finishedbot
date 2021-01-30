@@ -34,4 +34,7 @@ user_agent=Epic Bot
 ## Type the following command to start the bot:
         python3 main.py
 ## Adding custom mesages
-The replies are in the randomposts.txt file. Replies are split with '|' just add a '|' and after that put your reply, very easy
+The replies are in the randomposts.txt file. Replies are split with '|' just add a '|' and after that put your reply, very 
+## Slack
+By default, the bot sends you a notification on slack when an error occurs, but you can turn this off my setting sendSlackAlerts=false in main.py.
+For slack to work, you must provide your token in a file "slacktoken.txt" follow the instructions [here](https://www.fullstackpython.com/blog/build-first-slack-bot-python.html) to get your token.
